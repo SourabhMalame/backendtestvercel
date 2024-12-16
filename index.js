@@ -10,6 +10,10 @@ const app = express();
 // Use the PORT environment variable or default to 3000
 const port = process.env.PORT;
 
+app.use("/", (req, res) => {
+    res.send("hello world")
+})
+
 // Start the server
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
